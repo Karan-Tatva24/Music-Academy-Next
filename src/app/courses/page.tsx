@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import courseData from "@/data/music_courses.json";
+import Link from "next/link";
 
 interface Course {
   id: number;
@@ -48,12 +49,14 @@ function page() {
                 />
               </CardItem>
               <div className="mt-20 flex items-center justify-center">
-                <CardItem
-                  translateZ={20}
-                  className="rounded-full bg-gradient-to-b from-blue-500 to-blue-600 px-8 py-2 text-white transition duration-200 hover:shadow-xl focus:ring-2 focus:ring-blue-400"
-                >
-                  Learn more
-                </CardItem>
+                <Link href={`/courses/${course.slug}`}>
+                  <CardItem
+                    translateZ={20}
+                    className="rounded-md bg-[#0070f3] px-8 py-2 font-light text-white shadow-[0_4px_14px_0_rgb(0,118,255,39%)] transition duration-200 ease-linear hover:bg-[rgba(0,118,255,0.9)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)]"
+                  >
+                    Learn more
+                  </CardItem>
+                </Link>
               </div>
             </CardBody>
           </CardContainer>

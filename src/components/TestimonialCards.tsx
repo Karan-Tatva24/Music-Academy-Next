@@ -45,7 +45,7 @@ function MusicSchoolTestimonials() {
           <InfiniteMovingCards
             items={musicSchoolTestimonials}
             direction="right"
-            speed="slow"
+            speed="normal"
           />
         </div>
       </div>
